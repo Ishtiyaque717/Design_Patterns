@@ -3,7 +3,7 @@ package com.example.structuraldesginpattern;
 public class AdaptorDesginPatternEx2 {
 	public static void main(String[] args) {
 		IphoneCharging obj = new IphoneCharging();
-		IphoneChargerAdaptor adaptor= new IphoneChargerAdaptor();
+		IphoneChargerAdaptor adaptor = new IphoneChargerAdaptor();
 		obj.setCharger(adaptor);
 		obj.Charging("IphoneChargin is Completed 100%");
 	}
@@ -12,8 +12,8 @@ public class AdaptorDesginPatternEx2 {
 interface Charger {
 	void charge(String s);
 }
-class IphoneChargerAdaptor implements Charger{
 
+class IphoneChargerAdaptor implements Charger {
 
 	public void charge(String s) {
 		System.out.println(s);
@@ -23,6 +23,7 @@ class IphoneChargerAdaptor implements Charger{
 
 class IphoneCharger {
 	IphoneChargerAdaptor adaptor;
+
 	void Charging(String s) {
 		adaptor.charge(s);
 	}
